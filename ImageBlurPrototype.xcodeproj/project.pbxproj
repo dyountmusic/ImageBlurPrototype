@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		EA19F5A72268D1EB00591853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19F5A62268D1EB00591853 /* AppDelegate.swift */; };
-		EA19F5A92268D1EB00591853 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19F5A82268D1EB00591853 /* ViewController.swift */; };
+		EA19F5A92268D1EB00591853 /* HeroImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19F5A82268D1EB00591853 /* HeroImageViewController.swift */; };
 		EA19F5AC2268D1EB00591853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA19F5AA2268D1EB00591853 /* Main.storyboard */; };
 		EA19F5AE2268D1EC00591853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA19F5AD2268D1EC00591853 /* Assets.xcassets */; };
 		EA19F5B12268D1EC00591853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA19F5AF2268D1EC00591853 /* LaunchScreen.storyboard */; };
+		EA19F5B92268E04800591853 /* UIImage+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19F5B82268E04800591853 /* UIImage+Blur.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA19F5A32268D1EB00591853 /* ImageBlurPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageBlurPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA19F5A62268D1EB00591853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA19F5A82268D1EB00591853 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA19F5A82268D1EB00591853 /* HeroImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroImageViewController.swift; sourceTree = "<group>"; };
 		EA19F5AB2268D1EB00591853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA19F5AD2268D1EC00591853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA19F5B02268D1EC00591853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA19F5B22268D1EC00591853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA19F5B82268E04800591853 /* UIImage+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Blur.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				EA19F5A62268D1EB00591853 /* AppDelegate.swift */,
-				EA19F5A82268D1EB00591853 /* ViewController.swift */,
+				EA19F5A82268D1EB00591853 /* HeroImageViewController.swift */,
+				EA19F5B82268E04800591853 /* UIImage+Blur.swift */,
 				EA19F5AA2268D1EB00591853 /* Main.storyboard */,
 				EA19F5AD2268D1EC00591853 /* Assets.xcassets */,
 				EA19F5AF2268D1EC00591853 /* LaunchScreen.storyboard */,
@@ -135,7 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA19F5A92268D1EB00591853 /* ViewController.swift in Sources */,
+				EA19F5A92268D1EB00591853 /* HeroImageViewController.swift in Sources */,
+				EA19F5B92268E04800591853 /* UIImage+Blur.swift in Sources */,
 				EA19F5A72268D1EB00591853 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
