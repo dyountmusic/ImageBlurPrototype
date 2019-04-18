@@ -10,11 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var heroImageView: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupImageView()
     }
 
+    func setupImageView() {
+        let image = UIImage(named: "hero")
+        heroImageView.image = image
+        heroImageView.contentMode = .scaleAspectFit
+        heroImageView.blur()
+    }
+
+
+}
+
+extension UIImageView {
+
+    func blur() {
+        print("Blurring image")
+    }
 
 }
 
