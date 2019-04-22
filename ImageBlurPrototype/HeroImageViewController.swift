@@ -34,7 +34,7 @@ class HeroImageViewController: UIViewController {
 
     @IBAction func lightBlurButtonTapped(_ sender: Any) {
         resetImage()
-        heroImageView.image = heroImageView.image?.applyLightEffect()
+        heroImageView.applyBlur()
     }
 }
 

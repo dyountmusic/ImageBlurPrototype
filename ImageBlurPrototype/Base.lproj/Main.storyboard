@@ -32,12 +32,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="cUq-gC-tbP">
-                        <barButtonItem key="leftBarButtonItem" title="Dark Blur" id="B4Z-WE-BcL">
+                        <barButtonItem key="leftBarButtonItem" title="Apple Blur" id="B4Z-WE-BcL">
                             <connections>
                                 <action selector="darkBlurButtonTapped:" destination="BYZ-38-t0r" id="2g7-u4-2nM"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Light Blur" id="pmf-pe-qfA">
+                        <barButtonItem key="rightBarButtonItem" title="UIVEV Blur" id="pmf-pe-qfA">
                             <connections>
                                 <action selector="lightBlurButtonTapped:" destination="BYZ-38-t0r" id="ycf-Qf-rqq"/>
                             </connections>
