@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yh9-OX-uXx">
-                                <rect key="frame" x="227" y="320" width="315" height="384"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="MNq-nr-qTX" appends="YES" id="yVa-Fg-JQz"/>
@@ -28,10 +28,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yh9-OX-uXx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="227" id="FyB-Ct-0ak"/>
-                            <constraint firstAttribute="trailing" secondItem="yh9-OX-uXx" secondAttribute="trailing" constant="226" id="cB9-p6-rBz"/>
-                            <constraint firstItem="yh9-OX-uXx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="320" id="cBm-VF-jHx"/>
-                            <constraint firstItem="yh9-OX-uXx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-320" id="cz6-x8-bEC"/>
+                            <constraint firstItem="yh9-OX-uXx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FyB-Ct-0ak"/>
+                            <constraint firstAttribute="trailing" secondItem="yh9-OX-uXx" secondAttribute="trailing" id="cB9-p6-rBz"/>
+                            <constraint firstItem="yh9-OX-uXx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cBm-VF-jHx"/>
+                            <constraint firstItem="yh9-OX-uXx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cz6-x8-bEC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
