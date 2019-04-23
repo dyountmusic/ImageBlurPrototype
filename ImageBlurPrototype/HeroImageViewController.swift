@@ -11,6 +11,7 @@ import UIKit
 class HeroImageViewController: UIViewController, ImageBlurDelegate {
 
     @IBOutlet weak var heroImageView: UIImageView!
+    @IBOutlet var imageDragPanGestureRecgonizer: UIPanGestureRecognizer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,15 @@ class HeroImageViewController: UIViewController, ImageBlurDelegate {
 
     @IBAction func resetImageButtonTapped(_ sender: Any) {
         resetImage()
+    }
+
+    @IBAction func handlePan(_ sender: Any) {
+        let translation = imageDragPanGestureRecgonizer.translation(in: self.view)
+        if let view = imageDragPanGestureRecgonizer.view {
+            view.center = CGPoint(x:view.center.x + translation.x,
+                                  y:view.center.y + translation.y)
+        }
+        imageDragPanGestureRecgonizer.setTranslation(CGPoint.zero, in: self.view)
     }
 
     func blur(withOption: BlurOptions) {

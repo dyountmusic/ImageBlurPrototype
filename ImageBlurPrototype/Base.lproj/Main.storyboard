@@ -18,8 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yh9-OX-uXx">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yh9-OX-uXx">
                                 <rect key="frame" x="227" y="320" width="315" height="384"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MNq-nr-qTX" appends="YES" id="yVa-Fg-JQz"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -32,8 +36,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Blur Playground" largeTitleDisplayMode="always" id="cUq-gC-tbP">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="B4Z-WE-BcL">
-                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="leftBarButtonItem" title="Select Blur" id="B4Z-WE-BcL">
                             <connections>
                                 <action selector="blurOptionsButtonTapped:" destination="BYZ-38-t0r" id="2g7-u4-2nM"/>
                             </connections>
@@ -47,9 +50,15 @@
                     </navigationItem>
                     <connections>
                         <outlet property="heroImageView" destination="yh9-OX-uXx" id="AM9-zF-qOf"/>
+                        <outlet property="imageDragPanGestureRecgonizer" destination="MNq-nr-qTX" id="nWR-a7-8pd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="MNq-nr-qTX">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="EUh-R3-Hnv"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="903.90625" y="137.6953125"/>
         </scene>
