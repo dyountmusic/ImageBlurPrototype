@@ -9,8 +9,10 @@
 import UIKit
 
 enum BlurOptions: String {
-    case apple = "Apple Blur"
-    case uiVisualEffect = "UIVisualEffectBlur"
+    case appleLight = "Apple Light Blur"
+    case appleDark = "Apple Dark Blur"
+    case appleExtraLight = "Apple Extra Light Blur"
+    case uiVisualEffect = "UIVisualEffect Blur"
 }
 
 protocol ImageBlurDelegate: class {
@@ -21,7 +23,7 @@ class BlurOptionsTableViewController: UITableViewController {
 
     weak var blurDelegate: ImageBlurDelegate?
 
-    let blurOptions = [BlurOptions.apple, BlurOptions.uiVisualEffect]
+    var blurOptions: [BlurOptions] = [.appleDark, .appleLight, .appleExtraLight, .uiVisualEffect]
 
     override func viewDidLoad() {
         super.viewDidLoad()

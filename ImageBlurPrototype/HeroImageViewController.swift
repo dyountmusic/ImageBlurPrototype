@@ -24,6 +24,11 @@ class HeroImageViewController: UIViewController, ImageBlurDelegate {
     }
 
     private func resetImage() {
+        for subview in heroImageView.subviews {
+            if subview is UIVisualEffectView {
+                subview.removeFromSuperview()
+            }
+        }
         setupImageView()
     }
 
@@ -42,10 +47,14 @@ class HeroImageViewController: UIViewController, ImageBlurDelegate {
     func blur(withOption: BlurOptions) {
         resetImage()
         switch withOption {
-        case .apple:
-            heroImageView.image = heroImageView.image?.applyDarkEffect()
+        case .appleLight:
+            heroImageView.image = heroImageView.image?.applyLightEffect()
         case .uiVisualEffect:
             heroImageView.applyUIVisualEffectBlur()
+        case .appleDark:
+            heroImageView.image = heroImageView.image?.applyDarkEffect()
+        case .appleExtraLight:
+            heroImageView.image = heroImageView.image?.applyExtraLightEffect()
         }
     }
 }
