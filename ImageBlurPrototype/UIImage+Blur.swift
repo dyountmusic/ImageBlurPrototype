@@ -2,6 +2,7 @@ import UIKit
 import Accelerate
 
 public extension UIImage {
+    
     func applyLightEffect() -> UIImage? {
         return applyBlurWithRadius(30, tintColor: UIColor(white: 1.0, alpha: 0.3), saturationDeltaFactor: 1.8)
     }

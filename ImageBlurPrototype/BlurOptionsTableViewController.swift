@@ -13,7 +13,13 @@ enum BlurOptions: String {
     case uiVisualEffect = "UIVisualEffectBlur"
 }
 
+protocol ImageBlurDelegate: class {
+    func blur(withOption: BlurOptions)
+}
+
 class BlurOptionsTableViewController: UITableViewController {
+
+    weak var blurDelegate: ImageBlurDelegate?
 
     let blurOptions = [BlurOptions.apple, BlurOptions.uiVisualEffect]
 
@@ -43,18 +49,8 @@ class BlurOptionsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? BlurOptionsTableViewCell else { return }
         guard let blurOption = cell.blurOption else { return }
-        blur(withOption: blurOption)
-    }
-
-    private func blur(withOption: BlurOptions) {
-        switch withOption {
-        case .apple:
-            print("Apple Blur")
-            self.dismiss(animated: true, completion: nil)
-        case .uiVisualEffect:
-            print("UIVisualEffectBlur")
-            self.dismiss(animated: true, completion: nil)
-        }
+        blurDelegate?.blur(withOption: blurOption)
+        dismiss(animated: true, completion: nil)
     }
 }
 

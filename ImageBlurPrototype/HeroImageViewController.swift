@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeroImageViewController: UIViewController {
+class HeroImageViewController: UIViewController, ImageBlurDelegate {
 
     @IBOutlet weak var heroImageView: UIImageView!
 
@@ -31,11 +31,21 @@ class HeroImageViewController: UIViewController {
         let popoverView = BlurOptionsTableViewController()
         popoverView.modalPresentationStyle = .popover
         popoverView.popoverPresentationController?.barButtonItem = self.navigationItem.leftBarButtonItem
+        popoverView.blurDelegate = self
         self.present(popoverView, animated: true, completion: nil)
     }
 
     @IBAction func resetImageButtonTapped(_ sender: Any) {
         resetImage()
     }
-}
 
+    func blur(withOption: BlurOptions) {
+        resetImage()
+        switch withOption {
+        case .apple:
+            heroImageView.image = heroImageView.image?.applyDarkEffect()
+        case .uiVisualEffect:
+            heroImageView.applyUIVisualEffectBlur()
+        }
+    }
+}
