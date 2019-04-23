@@ -9,10 +9,13 @@
 import UIKit
 
 enum BlurOptions: String {
-    case appleLight = "Apple Light Blur"
-    case appleDark = "Apple Dark Blur"
-    case appleExtraLight = "Apple Extra Light Blur"
-    case uiVisualEffect = "UIVisualEffect Blur"
+    case appleLight = "Light Blur "
+    case appleDark = "Dark Blur "
+    case appleExtraLight = "Extra Light Blur "
+    case uiVisualEffectLight = "Light Blur"
+    case uiVisualEffectDark = "Dark Blur"
+    case uiVisualEffectProminant = "Prominant Blur"
+    case uiVisualEffectExtraLight = "Extra Light Blur"
 }
 
 protocol ImageBlurDelegate: class {
@@ -23,7 +26,8 @@ class BlurOptionsTableViewController: UITableViewController {
 
     weak var blurDelegate: ImageBlurDelegate?
 
-    var blurOptions: [BlurOptions] = [.appleDark, .appleLight, .appleExtraLight, .uiVisualEffect]
+    var blurOptions: [BlurOptions] = [.appleLight, .appleDark, .appleExtraLight]
+    var uiVisualEffectBlurOptions: [BlurOptions] = [.uiVisualEffectLight, .uiVisualEffectDark, .uiVisualEffectExtraLight, .uiVisualEffectProminant]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,17 +37,35 @@ class BlurOptionsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Apple Blur"
+        } else if section == 1 {
+            return "UI Visual Effect Blur"
+        } else { return "" }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return blurOptions.count
+        if section == 0 {
+            return blurOptions.count
+        } else if section == 1 {
+            return uiVisualEffectBlurOptions.count
+        } else { return 0 }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "blurOptionsCell", for: indexPath) as? BlurOptionsTableViewCell else  { return UITableViewCell() }
-        cell.textLabel?.text = blurOptions[indexPath.row].rawValue
-        cell.blurOption = blurOptions[indexPath.row]
+        if indexPath.section == 0 {
+            cell.textLabel?.text = blurOptions[indexPath.row].rawValue
+            cell.blurOption = blurOptions[indexPath.row]
+        } else if indexPath.section == 1 {
+            cell.textLabel?.text = uiVisualEffectBlurOptions[indexPath.row].rawValue
+            cell.blurOption = uiVisualEffectBlurOptions[indexPath.row]
+        } else { return cell }
+
         setupSize()
         return cell
     }

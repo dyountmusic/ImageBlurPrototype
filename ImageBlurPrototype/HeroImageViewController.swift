@@ -49,12 +49,18 @@ class HeroImageViewController: UIViewController, ImageBlurDelegate {
         switch withOption {
         case .appleLight:
             heroImageView.image = heroImageView.image?.applyLightEffect()
-        case .uiVisualEffect:
-            heroImageView.applyUIVisualEffectBlur()
         case .appleDark:
             heroImageView.image = heroImageView.image?.applyDarkEffect()
         case .appleExtraLight:
             heroImageView.image = heroImageView.image?.applyExtraLightEffect()
+        case .uiVisualEffectDark:
+            heroImageView.applyUIVisualEffectBlur(with: .dark)
+        case .uiVisualEffectLight:
+            heroImageView.applyUIVisualEffectBlur(with: .light)
+        case .uiVisualEffectProminant:
+            heroImageView.applyUIVisualEffectBlur(with: .prominent)
+        case .uiVisualEffectExtraLight:
+            heroImageView.applyUIVisualEffectBlur(with: .extraLight)
         }
     }
 }

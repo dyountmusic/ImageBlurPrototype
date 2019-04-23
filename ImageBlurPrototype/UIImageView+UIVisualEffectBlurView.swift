@@ -11,8 +11,8 @@ import UIKit
 
 extension UIImageView {
 
-    func applyUIVisualEffectBlur() {
-        let blurEffect = UIBlurEffect(style: .dark)
+    func applyUIVisualEffectBlur(with option: UIBlurEffect.Style = .dark) {
+        let blurEffect = UIBlurEffect(style: option)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(blurView)
