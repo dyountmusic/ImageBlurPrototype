@@ -13,6 +13,8 @@
 		EA19F5AE2268D1EC00591853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA19F5AD2268D1EC00591853 /* Assets.xcassets */; };
 		EA19F5B12268D1EC00591853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA19F5AF2268D1EC00591853 /* LaunchScreen.storyboard */; };
 		EA19F5B92268E04800591853 /* UIImage+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA19F5B82268E04800591853 /* UIImage+Blur.swift */; };
+		EA473373226F664300447365 /* BlurOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA473372226F664300447365 /* BlurOptionsTableViewController.swift */; };
+		EA473375226F698400447365 /* BlurOptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA473374226F698400447365 /* BlurOptionsTableViewCell.swift */; };
 		EA517F10226E60C100B18BDA /* UIImage+UIVisualEffectBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA517F0F226E60C100B18BDA /* UIImage+UIVisualEffectBlurView.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		EA19F5B02268D1EC00591853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA19F5B22268D1EC00591853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA19F5B82268E04800591853 /* UIImage+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Blur.swift"; sourceTree = "<group>"; };
+		EA473372226F664300447365 /* BlurOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurOptionsTableViewController.swift; sourceTree = "<group>"; };
+		EA473374226F698400447365 /* BlurOptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurOptionsTableViewCell.swift; sourceTree = "<group>"; };
 		EA517F0F226E60C100B18BDA /* UIImage+UIVisualEffectBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+UIVisualEffectBlurView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +64,8 @@
 			children = (
 				EA19F5A62268D1EB00591853 /* AppDelegate.swift */,
 				EA19F5A82268D1EB00591853 /* HeroImageViewController.swift */,
+				EA473372226F664300447365 /* BlurOptionsTableViewController.swift */,
+				EA473374226F698400447365 /* BlurOptionsTableViewCell.swift */,
 				EA19F5B82268E04800591853 /* UIImage+Blur.swift */,
 				EA517F0F226E60C100B18BDA /* UIImage+UIVisualEffectBlurView.swift */,
 				EA19F5AA2268D1EB00591853 /* Main.storyboard */,
@@ -144,7 +150,9 @@
 				EA19F5A92268D1EB00591853 /* HeroImageViewController.swift in Sources */,
 				EA19F5B92268E04800591853 /* UIImage+Blur.swift in Sources */,
 				EA517F10226E60C100B18BDA /* UIImage+UIVisualEffectBlurView.swift in Sources */,
+				EA473373226F664300447365 /* BlurOptionsTableViewController.swift in Sources */,
 				EA19F5A72268D1EB00591853 /* AppDelegate.swift in Sources */,
+				EA473375226F698400447365 /* BlurOptionsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

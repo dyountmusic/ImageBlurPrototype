@@ -27,14 +27,15 @@ class HeroImageViewController: UIViewController {
         setupImageView()
     }
 
-    @IBAction func darkBlurButtonTapped(_ sender: Any) {
-        resetImage()
-        heroImageView.image = heroImageView.image?.applyDarkEffect()
+    @IBAction func blurOptionsButtonTapped(_ sender: Any) {
+        let popoverView = BlurOptionsTableViewController()
+        popoverView.modalPresentationStyle = .popover
+        popoverView.popoverPresentationController?.barButtonItem = self.navigationItem.leftBarButtonItem
+        self.present(popoverView, animated: true, completion: nil)
     }
 
-    @IBAction func lightBlurButtonTapped(_ sender: Any) {
+    @IBAction func resetImageButtonTapped(_ sender: Any) {
         resetImage()
-        heroImageView.applyBlur()
     }
 }
 
